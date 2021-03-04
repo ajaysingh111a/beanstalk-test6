@@ -10,6 +10,6 @@ public class Controller {
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(){
-        return "application test -1";
+        return "application test -2";
     }
 }
