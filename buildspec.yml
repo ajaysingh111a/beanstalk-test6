@@ -15,9 +15,9 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn package
-      - mv target/test9-0.0.1-SNAPSHOT.war test9-0.0.1-SNAPSHOT.war
+      - mv target/*.war application.war
 artifacts:
   files:
-    - test9-0.0.1-SNAPSHOT.war
+    - application.war
 
 
