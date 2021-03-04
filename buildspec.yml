@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn clean
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
+      - mv target/test9-0.0.1-SNAPSHOT.war test9-0.0.1-SNAPSHOT.war
+artifacts:
+  files:
+    - test9-0.0.1-SNAPSHOT.war
+    - scripts/*
+    - .ebextensions/**/*
+
+
