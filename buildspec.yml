@@ -11,10 +11,10 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn clean
+      - mvn package
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvn package
       - mv target/*.war application.war
 artifacts:
   files:
