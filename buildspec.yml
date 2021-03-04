@@ -15,9 +15,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mv target/*.war application.war
+      - mv target/*.jar application.jar
 artifacts:
   files:
-    - application.war
+    - application.jar
 
 
